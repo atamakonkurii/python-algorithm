@@ -29,10 +29,7 @@ for w2 in range(W):
     for h2 in range(1, H):
         Z[h2][w2] = Z[h2-1][w2] + Z[h2][w2]
 
-print(Z)
-
 for q in range(Q):
-    # print(q,C[q],D[q])
     answer = Z[C[q]-1][D[q]-1] - Z[C[q]-1][B[q-1]-1] - Z[A[q-1]-1][D[q]-1] + Z[A[q-1]-1][B[q-1]-1]
     print(Z[C[q]-1][D[q]-1] , Z[C[q]-1][B[q-1]-1] , Z[A[q-1]-1][D[q]-1] , Z[A[q-1]-1][B[q-1]-1])
     print(answer)
